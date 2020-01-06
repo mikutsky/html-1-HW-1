@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>About me</title>
+  </head>
+  <body>
+    <h1>Dmitry Mikutsky</h1>
+
+    <!-- Photo -->
+    <div>
+      <!-- Элемент <img> - строчный, <h3> - блочный.
+        Вопрос:
+        Нужно ли <img> тут заключать в блочный элемент? Чтобы следовать правилу:
+        "В блочном элементе могут быть строчные и блочные эл-ты, но не одновременно
+        строчные и блочные".
+        Или тут исключение, на подобии, как и с элементом <a>? Который может
+        включать в себя блочные элементы, за исключением интерактивных, в отличии
+        от других строчных, которые не могут включать блочные.
+      -->
+      <img src="img/photo-512x512.jpg" alt="my photo" width="200px" />
+      <h3>I am an <mark>architect, designer, 3d artist, programmer</mark></h3>
+    </div>
+
+    <!-- Biography -->
+    <div>
+      <h2>My biography</h2>
+      <p>
+        I was born in Kiev, Ukraine. My parents are military.
+        <br />In 2011, I graduated from an architectural university. And in
+        <br />2015 graduated from theUniversityof Management.
+      </p>
+      <p>
+        Now I live in Odessa. And learning programming.
+      </p>
+    </div>
+
+    <!-- Interests -->
+    <div>
+      <h2>My interests</h2>
+      <ul>
+        <li>Neural networks and genetic algorithms</li>
+        <li>3D graphics</li>
+        <li>Modern Art</li>
+        <li>Physics and Astronomy</li>
+        <li>Neurobiology and genetics</li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h2>Please, add to me on social networks</h2>
+      <ol>
+        <li>
+          <a href="https://www.facebook.com/dmitry.mikutsky" target="_blank">
+            FaceBook
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/mikutsky" target="_blank">
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://www.behance.net/mikutsky" target="_blank">
+            Behance
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/mikutsky/" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+      </ol>
+    </div>
+
+    <!-- My simple script "COUNTER" - html part -->
+    <div>
+      <h2>Please, use my counter</h2>
+      <p>
+        <button onclick="countChange(+3)">+3</button>
+        <button onclick="countChange(+1)">+1</button>
+        <span class="result">0</span>
+        <button onclick="countChange(-1)">-1</button>
+        <button onclick="countChange(-3)">-3</button>
+      </p>
+    </div>
+
+    <!-- My simple script "COUNTER" - js part -->
+    <script>
+      let count = 0;
+      const span = document.querySelector('.result');
+      const countChange = n => (span.textContent = count += n);
+    </script>
+  </body>
+</html>
